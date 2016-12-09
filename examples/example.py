@@ -2,7 +2,7 @@
 """Test Bitly OAuth2 Proxy session"""
 from __future__ import print_function
 import os
-from Session import Session as bses
+from BitlyOAuth2ProxySession import Session as bses
 
 
 def main():
@@ -12,9 +12,9 @@ def main():
     # Unless you have an LSST account you'd want to change these
     baseurl = "https://logging.lsst.codes/oauth2/start"
     authpage = "https://logging.lsst.codes/app/kibana"
-    session = bses(oauth2_username=username,
-                   oauth2_password=password,
-                   authentication_base_url=baseurl)
+    session = bses.Session(oauth2_username=username,
+                           oauth2_password=password,
+                           authentication_base_url=baseurl)
     resp = session.get(authpage)
     print(resp)
     if resp.status_code == 200:

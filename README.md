@@ -1,8 +1,8 @@
 # BitlyOAuth2ProxySession
 
-This is a simple subclass of request.Session which, when initialized, or
-when you call its authenticate() method, does the magic to talk to the
-Bitly OAuth2 Proxy and return a session that is authenticated for
+This is a simple subclass of `requests.Session` which, when initialized,
+or when you call its `authenticate()` method, does the magic to talk to
+the Bitly OAuth2 Proxy and return a session that is authenticated for
 whatever is behind it.
 
 The use case here is a read-only service user, which does not require
@@ -10,6 +10,14 @@ two-factor authentication, that you want to be able to access resources
 behind the Bitly proxy.  Our _particular_ use case right now is for a
 monitoring system to be able to check on web pages that require
 authentication.  There's one class, the imaginatively-named `Session`.
+
+## Installation
+
+`pip install bitly-oauth2-proxy-session`
+
+Or check out the repository, `cd` to its root directory, and `python
+setup.py install`.  It requires a fairly recent `requests` (2.8.1 or
+later).
 
 ## Instance Attributes
 
@@ -45,10 +53,6 @@ authentication.  There's one class, the imaginatively-named `Session`.
     fields via the setter methods, and then run `authenticate()`.  Pull
     requests welcomed.
 * Do sessiony things, like `get()` and `post()`.
-
-## TODO
-
-Add a `setup.py`, upload to PyPi, make it pip-installable.
 
 ## Bugs
 

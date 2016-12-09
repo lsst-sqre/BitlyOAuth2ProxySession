@@ -86,6 +86,10 @@ class Session(requests.Session):
 
 def _extract_authenticity_token(data):
     """Don't look, I'm hideous!"""
+    # Super-cheap Python3 hack.
+    if not isinstance(data, str):
+        data = str(data, 'utf-8')
     pos = data.find("authenticity_token")
+    # Super-gross.
     authtok = str(data[pos + 41:pos + 41 + 88])
     return authtok
