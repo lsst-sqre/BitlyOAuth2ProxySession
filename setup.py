@@ -10,7 +10,7 @@ DESCRIPTION = 'LSST Data Management SQuaRE Bitly-Proxy Authenticated Sessions'
 AUTHOR = 'Adam Thornton'
 AUTHOR_EMAIL = 'athornton@lsst.org'
 URL = 'https://github.com/lsst-sqre/BitlyOAuth2ProxySession/'
-VERSION = '0.1.3'
+VERSION = '0.1.4'
 LICENSE = 'MIT'
 
 

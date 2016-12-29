@@ -81,7 +81,7 @@ class Session(requests.Session):
             # This is also for GitHub
             authentication_session_url = "https://github.com/session"
             self.authentication_session_url = authentication_session_url
-        self.post(authentication_session_url, data=postdata)
+        self.post(self.authentication_session_url, data=postdata)
 
 
 def _extract_authenticity_token(data):
