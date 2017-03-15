@@ -1,5 +1,6 @@
 #!/usr/bin/env python
-'''Making it pip-installable'''
+"""BitlyOauth2ProxySession setup
+"""
 import os
 import codecs
 import setuptools
@@ -10,7 +11,7 @@ DESCRIPTION = 'LSST Data Management SQuaRE Bitly-Proxy Authenticated Sessions'
 AUTHOR = 'Adam Thornton'
 AUTHOR_EMAIL = 'athornton@lsst.org'
 URL = 'https://github.com/lsst-sqre/BitlyOAuth2ProxySession/'
-VERSION = '0.1.4'
+VERSION = '0.1.5'
 LICENSE = 'MIT'
 
 
@@ -41,6 +42,6 @@ setuptools.setup(
     keywords='lsst',
     packages=setuptools.find_packages(exclude=['docs', 'tests*']),
     install_requires=[
-        'requests==2.8.1',
+        'requests>=2.13.0,<3.0.0',
     ],
 )
